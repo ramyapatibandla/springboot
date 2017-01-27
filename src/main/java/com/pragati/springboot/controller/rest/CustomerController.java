@@ -1,4 +1,4 @@
-package com.srikanth.springboot.controller.rest;
+package com.pragati.springboot.controller.rest;
 
 import java.util.List;
 
@@ -11,8 +11,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.google.gson.Gson;
-import com.srikanth.springboot.domain.Customer;
-import com.srikanth.springboot.service.CustomerService;
+import com.pragati.springboot.domain.Customer;
+import com.pragati.springboot.service.CustomerService;
 
 @RestController
 @RequestMapping("/rest")
@@ -29,7 +29,8 @@ public class CustomerController {
 	public String getAllRequestTypes() {
 		List<Customer> customers = customerService.getCustomers();
 		String customersJson = new Gson().toJson(customers);
+		logger.info(customersJson);
 		return customersJson;
 	}
-
+	
 }

@@ -1,4 +1,4 @@
-package com.srikanth.springboot.domain;
+package com.pragati.springboot.domain;
 
 import org.springframework.data.annotation.Id;
 
